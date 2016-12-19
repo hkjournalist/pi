@@ -3,6 +3,7 @@ import itchat
 from itchat.content import TEXT
 import threading
 import time
+import os
 
 
 @itchat.msg_register(itchat.content.TEXT)#, MAP, CARD, NOTE, SHARING])
@@ -37,7 +38,12 @@ def together():#模拟微信登录，并向邮箱发送验证码
     if chose==1:
       itchat.auto_login(hotReload=True) #短期内重新登录不需要刷验证码
     else:
-      time.sleep(3)
+      flag=True
+      while flag:
+        time.sleep(3)
+        if os.path.exists('QR.jpg'):
+            pass
+
 
   for i in nloops:
     t=threading.Thread(target=lp,args=(i,loops[i]))
