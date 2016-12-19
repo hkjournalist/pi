@@ -44,7 +44,7 @@ def together():#模拟微信登录，并向邮箱发送验证码
         time.sleep(3)
         if os.path.exists('QR.jpg'):
             email_pic.submit()
-            
+            flag=False
 
 
   for i in nloops:
