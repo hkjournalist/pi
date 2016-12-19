@@ -1,4 +1,5 @@
-
+#coding=utf-8
+#发送邮件所需信息
 sender = 'wangjianpeng0822@163.com'
 receiver = 'wangjianpeng0822@163.com'
 subject = 'python email test'
