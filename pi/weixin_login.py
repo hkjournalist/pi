@@ -1,3 +1,4 @@
+#coding=utf-8
 import itchat
 #import spider2
 from itchat.content import TEXT
@@ -46,7 +47,6 @@ def together():#模拟微信登录，并向邮箱发送验证码
             email_pic.submit()
             flag=False
 
-
   for i in nloops:
     t=threading.Thread(target=lp,args=(i,loops[i]))
     threads.append(t)
@@ -57,6 +57,7 @@ def together():#模拟微信登录，并向邮箱发送验证码
   for i in nloops:
     threads[i].join()
 
+together()
 #itchat.auto_login(hotReload=True) #短期内重新登录不需要刷验证码
 #
 user_info=itchat.search_friends() #获取本用户信息
