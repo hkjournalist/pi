@@ -4,6 +4,7 @@ from itchat.content import TEXT
 import threading
 import time
 import os
+from . import email_pic
 
 
 @itchat.msg_register(itchat.content.TEXT)#, MAP, CARD, NOTE, SHARING])
@@ -42,7 +43,8 @@ def together():#模拟微信登录，并向邮箱发送验证码
       while flag:
         time.sleep(3)
         if os.path.exists('QR.jpg'):
-            pass
+            email_pic.submit()
+            
 
 
   for i in nloops:
